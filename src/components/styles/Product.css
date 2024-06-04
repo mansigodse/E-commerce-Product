@@ -1,0 +1,113 @@
+.product {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 100%; /* Adjusted width */
+  max-width: 320px; /* Set a maximum width for larger screens */
+  margin: 15px auto; /* Center-align and add margin */
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product.expanded {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  position: relative;
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-content {
+  padding: 15px;
+}
+
+.product-title {
+  font-size: 1.3em; /* Increased font size */
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.product-description {
+  font-size: 1em; /* Increased font size */
+  margin-bottom: 10px;
+  color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Show up to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 3em; /* Adjusted max height */
+  transition: max-height 0.3s ease-in-out;
+}
+
+.product-description.expanded {
+  display: block;
+  max-height: none;
+}
+
+.read-more {
+  color: #007bff;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 1em; /* Increased font size */
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.product-price {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.product-category {
+  font-size: 1em; /* Increased font size */
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product-rating {
+  font-size: 1em; /* Increased font size */
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 10px;
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.product button:hover {
+  background-color: #0056b3;
+}
